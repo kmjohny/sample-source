@@ -1,0 +1,20 @@
+[req]
+default_bits = 1024
+distinguished_name = req_distinguished_name
+x509_extensions = v3_req
+prompt = no
+[req_distinguished_name]
+C = US
+ST = PA
+L = Pittsburgh
+O = Pennsylvania
+OU = UPMCE
+CN = localhost
+[v3_req] 
+keyUsage = keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = localhost
+DNS.2 = source
+DNS.3 = target

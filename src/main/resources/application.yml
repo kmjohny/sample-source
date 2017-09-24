@@ -1,0 +1,15 @@
+logging.level:
+  org.springframework: ERROR
+
+server:
+  port: 5000
+  ssl:
+    key-store: $JAVA_HOME/lib/security/cacerts
+    key-password: changeit
+    key-store-password: changeit
+    keyStoreType: PKCS12
+    keyAlias: source
+
+sample:
+  target:
+    URI: http://192.168.64.6:5001/target/hello
